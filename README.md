@@ -1,8 +1,8 @@
 # F4TE Staff Panel
 
-> Painel interno de staff para hotéis retro Habbo — criando essa versão pra equipe de DEV que me chamou, e resolvi liberar open-source pro nosso projeto.
+> Painel interno de staff para o Habborn, criando essa versão pra equipe de DEV que me chamou, e resolvi liberar open-source pro nosso projeto.
 
-Eu sou o **f4te**, membro da equipe de DEV de um Habbo pirata, e esse painel é a ferramenta que eu uso (e a galera do MOD usa) pra executar as ações rápidas do dia a dia: teletransportar usuário, mandar alerta, criar evento, abrir chooser, gerenciar hall e pagamentos, e zerar cota. Tudo numa Janelinha flutuante que pode ser minimizada e arrastada pela tela.
+Eu sou o **f4te**, membro da equipe de DEV do Habborn, e esse painel é a ferramenta que eu uso (e a galera do MOD usa) pra executar as ações rápidas do dia a dia: teletransportar usuário, mandar alerta, criar evento, abrir chooser, gerenciar hall e pagamentos, e zerar cota. Tudo numa Janelinha flutuante que pode ser minimizada e arrastada pela tela.
 
 ---
 
