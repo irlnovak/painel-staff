@@ -1,4 +1,4 @@
-# F4TE Staff Panel
+# Painel Habborn
 
 > Painel interno de staff para o Habborn, criando essa versão pra equipe de DEV que me chamou, e resolvi liberar open-source pro nosso projeto.
 
