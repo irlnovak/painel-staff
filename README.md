@@ -125,7 +125,7 @@ await axios.post(`${process.env.EMULATOR_API_URL}/tele`, { user, room }, {
 
 ## 👤 Sobre
 
-Eu (f4te) fiz esse projeto pra equipe interna, mas como tá rodando redondo resolvi abrir o código pra comunidade de devs de retro Habbo adaptarem pro hotel deles. Pull Requests são bem-vindos.
+Eu (f4te) fiz esse projeto pra equipe interna do Habborn, mas como tá rodando redondo resolvi abrir o código pra comunidade de devs de retro Habbo adaptarem pro hotel deles. Pull Requests são bem-vindos.
 
 ## 📜 Licença
 
