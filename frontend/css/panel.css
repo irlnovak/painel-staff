@@ -1,0 +1,190 @@
+/* =================================================
+   F4TE STAFF PANEL — CSS
+   Criado por f4te
+   ================================================= */
+:root {
+  --bg:        #7d6c4a;          /* fundo principal (olive/tan) */
+  --panel-bg:  #1a1612;          /* painel escuro */
+  --btn-side:  #2f3245;          /* botões laterais */
+  --pill:      #00a651;          /* botões topo verdes */
+  --pill-reset:#00a651;
+  --purple:    #4b18a4;
+  --teal:      #127e8a;
+  --red:       #c6112c;
+  --text:      #ffffff;
+  --muted:     #c9c4ba;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+body { background: var(--bg); }
+
+/* ============ PAINEL ============ */
+.f4te-panel {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 320px;
+  background: var(--panel-bg);
+  color: var(--text);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.5);
+  z-index: 999999;
+  user-select: none;
+  overflow: hidden;
+  transition: opacity .15s ease;
+}
+.f4te-panel.hidden { display: none; }
+
+/* HEADER */
+.f4te-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px;
+  background: #0d0b09;
+  border-bottom: 1px solid #000;
+  cursor: move;
+}
+.f4te-head-left { display: flex; gap: 4px; flex-wrap: wrap; }
+.f4te-pill {
+  background: var(--pill);
+  color: #fff;
+  border: 0;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .3px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: filter .15s;
+}
+.f4te-pill:hover { filter: brightness(1.15); }
+.f4te-pill.reset { background: var(--pill-reset); }
+.f4te-head-right { display: flex; align-items: center; gap: 6px; }
+.f4te-info { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.f4te-info b { color:#fff; font-weight:700; }
+.f4te-min {
+  background:#222; color:#fff; border:0;
+  width: 26px; height: 26px; border-radius: 4px;
+  font-weight: 700; cursor: pointer; font-size: 14px;
+}
+.f4te-min:hover { background:#333; }
+
+/* SIDE */
+.f4te-side {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 8px;
+  background: #100e0c;
+}
+.f4te-btn {
+  background: var(--btn-side);
+  color: #fff;
+  border: 0;
+  padding: 9px 12px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: filter .15s, transform .05s;
+}
+.f4te-btn:hover { filter: brightness(1.2); }
+.f4te-btn:active { transform: translateY(1px); }
+.f4te-btn.hall    { background: var(--purple); }
+.f4te-btn.pay     { background: var(--teal); }
+.f4te-btn.danger  { background: var(--red); }
+
+/* MAIN (conteúdo dinâmico) */
+.f4te-main {
+  padding: 12px;
+  background: #100e0c;
+  min-height: 80px;
+  max-height: 320px;
+  overflow-y: auto;
+  font-size: 13px;
+}
+.f4te-welcome h2 { margin: 0 0 8px; font-size: 14px; }
+.f4te-welcome p  { margin: 0; color: var(--muted); }
+
+/* FAB (botão flutuante quando minimizado) */
+.f4te-fab {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #1a1612;
+  color: #fff;
+  border: 0;
+  border-radius: 26px;
+  padding: 10px 14px;
+  display: flex; align-items: center; gap: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .5px;
+  cursor: pointer;
+  z-index: 999999;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45);
+}
+.f4te-fab.hidden { display: none; }
+.f4te-fab:hover { filter: brightness(1.15); }
+
+/* ============ MODAL ============ */
+.f4te-modal-back {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000000;
+}
+.f4te-modal {
+  background: #1a1612;
+  color: #fff;
+  width: min(420px, 92vw);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.6);
+  border: 1px solid #2a2620;
+}
+.f4te-modal h3 { margin: 0 0 12px; font-size: 15px; }
+.f4te-modal label { display:block; font-size:12px; color: var(--muted); margin-top:10px; }
+.f4te-modal input, .f4te-modal textarea, .f4te-modal select {
+  width: 100%; box-sizing: border-box;
+  background: #0d0b09;
+  border: 1px solid #2a2620;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.f4te-modal-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:16px; }
+.f4te-modal-actions button {
+  border:0; padding:8px 14px; border-radius:5px; font-weight:700; cursor:pointer; font-size:12px;
+}
+.f4te-modal-actions .cancel { background:#333; color:#fff; }
+.f4te-modal-actions .ok     { background: var(--pill); color:#fff; }
+
+/* TOAST */
+.f4te-toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1a1612;
+  color: #fff;
+  border: 1px solid #2a2620;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  z-index: 1000001;
+  max-width: 90vw;
+}
+.f4te-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.f4te-toast.error { border-color: var(--red); }
+.f4te-toast.ok    { border-color: var(--pill); }

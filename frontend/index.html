@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F4TE • Staff Panel</title>
+<link rel="stylesheet" href="/css/panel.css">
+</head>
+<body>
+
+<!-- BOTÃO FLUTUANTE (quando minimizado) -->
+<button id="f4te-fab" class="f4te-fab hidden" title="Abrir Painel F4TE">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M3 4h18v3H3V4zm0 6.5h18v3H3v-3zm0 6.5h18v3H3v-3z"/></svg>
+  <span>F4TE</span>
+</button>
+
+<!-- PAINEL PRINCIPAL -->
+<div id="f4te-panel" class="f4te-panel">
+  <header class="f4te-head" id="f4te-head">
+    <div class="f4te-head-left">
+      <button class="f4te-pill" data-act="aumentar">AUMENTAR</button>
+      <button class="f4te-pill" data-act="diminuir">DIMINUIR</button>
+      <button class="f4te-pill" data-act="quarto">QUARTO</button>
+      <button class="f4te-pill" data-act="nickname">NICKNAME</button>
+      <button class="f4te-pill reset" data-act="reset">RESET</button>
+    </div>
+    <div class="f4te-head-right">
+      <span class="f4te-info"><b id="quarto-count">71</b> - [E.H] Push <b>1x1</b></span>
+      <button class="f4te-min" id="f4te-min" title="Minimizar">—</button>
+    </div>
+  </header>
+
+  <nav class="f4te-side">
+    <button class="f4te-btn"  data-modal="tele">:TELE</button>
+    <button class="f4te-btn"  data-modal="alert">ATT.</button>
+    <button class="f4te-btn"  data-modal="evento">ADD EVENTO.</button>
+    <button class="f4te-btn"  data-modal="chooser">:CHOOSER</button>
+    <button class="f4te-btn hall" data-modal="hall">Hall</button>
+    <button class="f4te-btn pay" data-modal="pagamento">Reg. Pagamento</button>
+    <button class="f4te-btn danger" data-action="zerar-cota">Zerar Cota</button>
+  </nav>
+
+  <main class="f4te-main" id="f4te-main">
+    <div class="f4te-welcome">
+      <h2>Bem-vindo ao Painel de Staff</h2>
+      <p>Use os botões à esquerda para executar ações rápidas. Clique em <b>—</b> no canto superior para minimizar.</p>
+    </div>
+  </main>
+</div>
+
+<!-- TEMPLATE: MODAL -->
+<div id="f4te-modal-root"></div>
+
+<!-- TOAST -->
+<div id="f4te-toast" class="f4te-toast"></div>
+
+<script src="/js/panel.js"></script>
+</body>
+</html>
